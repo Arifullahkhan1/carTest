@@ -21,7 +21,7 @@ function BottomTabNavigator() {
 
   return (
     <Tab.Navigator
-      tabBar={props => <CustomTabBar {...props} />}
+      // tabBar={props => <CustomTabBar {...props} />}
       screenOptions={({route}) => ({
         headerShown: false,
         tabBarShowLabel: false,
@@ -88,11 +88,12 @@ export default BottomTabNavigator;
 const styles = StyleSheet.create({
   tabBarStyle: {
     position: 'absolute',
-    backgroundColor: COLORS.transparent,
+    backgroundColor: 'white',
     borderTopWidth: 0,
+    borderRadius: 10,
     bottom: 15,
     right: 10,
     left: 10,
-    height: 92,
+    height: 80,
   },
 });

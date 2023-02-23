@@ -6,7 +6,7 @@ import colors from '../contants/colors';
 const CustomTabBar = props => {
   return (
     <View>
-      <View style={styles.tabBar} />
+      {/* <View style={styles.tabBar} /> */}
       <BottomTabBar {...props} />
     </View>
   );
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     right: 10,
     left: 10,
-    bottom: 38,
+    bottom: 14,
     height: 20,
     backgroundColor: colors.white,
     borderRadius: 10,
