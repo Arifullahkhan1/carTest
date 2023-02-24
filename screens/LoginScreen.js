@@ -82,14 +82,14 @@ const handleLogin = () => {
       </View>
 
    <View style={loginStyle.footer}>
-          <Text style={loginStyle.footerText}> Har du inget konto? </Text>
+          <Text style={loginStyle.footerText}> If you are not Registered? </Text>
           
           <TouchableOpacity
            onPress={() =>
        navigation.navigate('Registration', {name: 'Jane'})
   
       } >
-            <Text style={loginStyle.signupBtn}>Bli Medlem</Text>
+            <Text style={loginStyle.signupBtn}>SignUp</Text>
           </TouchableOpacity>
         </View> 
      

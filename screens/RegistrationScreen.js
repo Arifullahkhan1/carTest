@@ -50,6 +50,7 @@ const RegistrationScreen = () => {
           value={email}
           onChangeText={(text) => setEmail(text)}
           style={loginStyle.input}
+         
         />
         <TextInput
           placeholder="lösenord"
@@ -66,7 +67,7 @@ const RegistrationScreen = () => {
         <TouchableOpacity
           onPress={handleSignUp}
           style={[loginStyle.button, loginStyle.buttonOutline]} >
-          { <Text style={loginStyle.buttonOutlineText}>SKAPA KONTO</Text>}
+          { <Text style={loginStyle.buttonOutlineText}>Create Account</Text>}
            </TouchableOpacity>
       </View>
 
