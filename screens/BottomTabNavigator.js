@@ -95,5 +95,6 @@ const styles = StyleSheet.create({
     right: 10,
     left: 10,
     height: 80,
+    marginBottom:9,
   },
 });

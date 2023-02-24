@@ -38,6 +38,7 @@ const styles = StyleSheet.create({
   btnWrapper: {
     flex: 1,
     alignItems: 'center',
+   
   },
   activeBtn: {
     flex: 1,
@@ -65,6 +66,7 @@ const styles = StyleSheet.create({
     zIndex: 5,
     borderColor: '#82ccdd',
     borderWidth: 5,
+   
   },
   inactiveBtn: {
     flex: 1,
@@ -74,6 +76,6 @@ const styles = StyleSheet.create({
   },
   svgGapFiller: {
     flex: 1,
-    backgroundColor: colors.white,
+    backgroundColor: colors.whit,
   },
 });

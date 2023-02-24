@@ -4,6 +4,7 @@ import { KeyboardAvoidingView,Text,TextInput,TouchableOpacity, View, Alert} from
 import { createUserWithEmailAndPassword} from "firebase/auth";
 import { auth } from "../firebase-config";
 import loginStyle from "../styles/loginScreenStyle/loginStyle";
+import Profile from "./tabScreens/Profile";
 
 //import Login from '../screens/LoginScreen';
 //import { StackActions } from '@react-navigation/native';
@@ -13,6 +14,11 @@ import loginStyle from "../styles/loginScreenStyle/loginStyle";
 const RegistrationScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [afterName, setAfterName] = useState("khan");
+  const [telNumber, setTelNumber] = useState("");
+
+
 
   const navigation = useNavigation();
 
@@ -38,6 +44,7 @@ const RegistrationScreen = () => {
       })
      
       .catch((error) => alert(error.message));
+      
   };
 
   
@@ -50,31 +57,58 @@ const RegistrationScreen = () => {
           value={email}
           onChangeText={(text) => setEmail(text)}
           style={loginStyle.input}
-         
         />
-        <TextInput
+         <TextInput
           placeholder="lösenord"
           value={password}
           onChangeText={(text) => setPassword(text)}
           style={loginStyle.input}
           secureTextEntry
+          
         />
+        
+        <TextInput
+          placeholder="förnamn"
+          value={firstName}
+          onChangeText={(text) => setFirstName(text)}
+          style={loginStyle.input}
+          
+        />
+        <TextInput
+          placeholder="efternamn"
+          value={afterName}
+          onChangeText={(text) => setAfterName(text)}
+          style={loginStyle.input}
+          
+        />
+        <TextInput
+          placeholder="Telefon nummer"
+          value={telNumber}
+          onChangeText={(text) => setTelNumber(text)}
+          style={loginStyle.input}
+          
+        />
+     
+        
       </View>
+      
 
       <View style={loginStyle.buttonContainer}>
         
-        
-        <TouchableOpacity
+         <TouchableOpacity
           onPress={handleSignUp}
           style={[loginStyle.button, loginStyle.buttonOutline]} >
-          { <Text style={loginStyle.buttonOutlineText}>Create Account</Text>}
+          { <Text style={loginStyle.buttonOutlineText}>SKAPA KONTO</Text>}
            </TouchableOpacity>
-      </View>
 
-   
+           <Profile fName={firstName} efterName={afterName} telNumber={telNumber}/>
+      </View>
+      
+
+     
      
     </KeyboardAvoidingView>
   );
 };
 
-export default RegistrationScreen;
+export default RegistrationScreen ;
